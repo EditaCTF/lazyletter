@@ -6,7 +6,8 @@ import React, {useState, useEffect} from 'react';
 export default function Home() {
 
 const action = () => {
-    let reason = document.getElementById("reason")
+    let reason1 = document.getElementById("reason")
+    const reason = reason1 as HTMLSelectElement;
     if (reason.value === "OD") {
         onduty();
     } else if (reason.value === "Hostel Stay") {
