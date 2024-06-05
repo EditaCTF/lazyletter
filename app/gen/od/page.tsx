@@ -13,7 +13,7 @@ const action = () => {
     let end = document.getElementById("end");
     let reason = document.getElementById("reason");
     let advisor = document.getElementById("adv");
-    if (ans){
+    if (ans && name && roll && clas && start && end && reason && advisor){
     ans.innerHTML = `
 Subject: Request for On Duty (OD) Approval
 Dear ${advisor.value},
