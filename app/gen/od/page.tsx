@@ -13,21 +13,24 @@ const action = () => {
     let end = document.getElementById("end");
     let reason = document.getElementById("reason");
     let advisor = document.getElementById("adv");
-    ans.innerHTML = `
-Subject: Request for On Duty (OD) Approval
-Dear ${advisor.value},
-I trust this email finds you well.
-I am writing to formally request approval for On Duty (OD) for the following period:
-Date(s) of On Duty: ${start.value} to ${end.value}
-As a student of ${clas.value}, I am seeking permission to be excused from regular classes to fulfill my responsibilities during the specified OD period. The purpose of my OD is ${reason.value}.
-I assure you that I will make up for any missed coursework or assignments during my absence and will ensure minimal disruption to my academic obligations.
-Attached to this email are any necessary documents or supporting materials related to my OD request. I kindly request your approval for this OD at your earliest convenience.
-Thank you for considering my request. I am available to provide any further information or clarification if needed.
-Looking forward to your positive response.
-Best regards,
-${name.value}
-${roll.value}
-    `
+    if (ans) {
+        if (ans) {
+        ans.innerHTML = `
+        Subject: Request for On Duty (OD) Approval
+        Dear ${advisor.value},
+        I trust this email finds you well.
+        I am writing to formally request approval for On Duty (OD) for the following period:
+        Date(s) of On Duty: ${start.value} to ${end.value}
+        As a student of ${clas.value}, I am seeking permission to be excused from regular classes to fulfill my responsibilities during the specified OD period. The purpose of my OD is ${reason.value}.
+        I assure you that I will make up for any missed coursework or assignments during my absence and will ensure minimal disruption to my academic obligations.
+        Attached to this email are any necessary documents or supporting materials related to my OD request. I kindly request your approval for this OD at your earliest convenience.
+        Thank you for considering my request. I am available to provide any further information or clarification if needed.
+        Looking forward to your positive response.
+        Best regards,
+        ${name.value}
+        ${roll.value}
+        `;
+    }
 }
 return (
     <main className="flex min-h-screen flex-col bg-slate-400">
@@ -57,7 +60,7 @@ return (
           
                 <button className="bg-slate-800 text-white p-2 rounded-md ml-20 mt-5" onClick={action}>Generate</button>
                 <pre className="pl-10 text-wrap">
-                    <code  id="ans">Output</code>
+                    <code  id="ans"></code>
                 </pre>
             </div>
     </main>
