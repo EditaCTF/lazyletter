@@ -57,7 +57,7 @@ return (
           
                 <button className="bg-slate-800 text-white p-2 rounded-md ml-20 mt-5" onClick={action}>Generate</button>
                 <pre className="pl-10 text-wrap">
-                    <code  id="ans"></code>
+                    <code  id="ans">Output</code>
                 </pre>
             </div>
     </main>
