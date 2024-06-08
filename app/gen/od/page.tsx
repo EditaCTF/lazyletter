@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import React, {useState, useEffect} from 'react';
+import Link from "next/link";
 
 export default function Home() {
 const action = () => {
@@ -25,7 +26,7 @@ const action = () => {
         ans.innerHTML = `
     Subject: Request for On Duty (OD) Approval
     Dear ${advisorInput.value},
-    I trust this email finds you well.
+    I hope this email finds you well.
     I am writing to formally request approval for On Duty (OD) for the following period:
     Date(s) of On Duty: ${startInput.value} to ${endInput.value}
     As a student of ${clasInput.value}, I am seeking permission to be excused from regular classes to fulfill my responsibilities during the specified OD period. The purpose of my OD is ${reasonInput.value}.
@@ -41,9 +42,9 @@ const action = () => {
 return (
     <main className="flex min-h-screen flex-col bg-slate-400">
         <div>
-            <div>
+            <Link className="" href="/">
                 <h1 className="text-3xl p-3 text-slate-800 w-fit rounded-2xl font-mono">Lazy Letter</h1>
-            </div>
+            </Link>
             <div>
                 <h2 className="text-2xl p-3 text-slate-800 w-fit rounded-2xl font-mono">Generate your day to day college letters in seconds.</h2>
             </div>
